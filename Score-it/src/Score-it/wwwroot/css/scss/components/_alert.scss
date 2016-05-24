@@ -1,0 +1,34 @@
+$alert-blue: #348195;
+$alert-green: #a82d42;
+$alert-red: #267538;
+
+.alert {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 5px 5px;
+    min-height: 38px;
+    padding: 10px 70px 10px 20px;
+    position: relative;
+
+    button {
+        background: rgba($color-black, .1);
+        cursor: pointer;
+        height: 30px;
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 30px;
+    }
+
+    &.blue {
+        background: $alert-blue;
+    }
+
+    &.green {
+        background: $alert-green;
+    }
+
+    &.red {
+        background: $alert-red;
+    }
+}

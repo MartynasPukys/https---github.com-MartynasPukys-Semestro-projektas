@@ -1,0 +1,74 @@
+$table-offline-color: desaturate($color-blue, 90);
+$table-online-color: darken($color-blue, 8);
+$table-paired-color: #14be5d;
+
+.table {
+    align-items: center;
+    border-bottom: 1px solid $color-border-light;
+    display: flex;
+    margin: 0 -15px;
+    padding: 18px 15px;
+    transition: background .2s;
+
+    > i {
+        color: $table-offline-color;
+        font-size: 32px;
+        margin-right: 10px;
+    }
+
+    &-name {
+        color: $table-offline-color;
+    }
+
+    > button {
+        background: $table-offline-color;
+        border-radius: 30px;
+        color: $color-white;
+        cursor: pointer;
+        flex: 0 0 75px;
+        font-size: 15px;
+        font-weight: 400;
+        height: 30px;
+        margin-left: auto;
+        transition: all .2s;
+
+        &:active {
+            opacity: .8;
+        }
+    }
+
+    &.online {
+        > i {
+            color: $table-online-color;
+        }
+
+        .table-name {
+            color: $color-grey-dark;
+            font-weight: 500;
+        }
+
+        > button {
+            background: $table-online-color;
+        }
+    }
+
+    &.paired {
+        > i {
+            color: $table-paired-color;
+        }
+
+        > button {
+            background: $table-paired-color;
+        }
+    }
+}
+
+.button-table-paired {
+    background: $table-paired-color;
+    border-color: transparent;
+    font-weight: 500;
+
+    &:active {
+        background: rgba($table-paired-color, .6);
+    }
+}

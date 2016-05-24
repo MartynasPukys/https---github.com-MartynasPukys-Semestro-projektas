@@ -1,0 +1,36 @@
+.game-play-players {
+    padding: 30px 15px;
+
+    &-group {
+        background: $color-grey-mid;
+        border-left: 2px solid transparent;
+
+        &.blue {
+            border-color: $color-blue;
+        }
+
+        &.red {
+            border-color: $color-red;
+        }
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+    .player {
+        border-bottom: 0;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &-avatar {
+            .level {
+                i {
+                    background: $color-grey-mid;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.input {
+    border-bottom: 1px solid rgba($color-white, .2);
+    color: $color-white;
+    display: block;
+    font-size: 16px;
+    height: 30px;
+    margin: 0 0 30px;
+    transition: all .2s;
+    width: 100%;
+
+    &:focus {
+        border-color: $color-white;
+    }
+
+    &:invalid {
+        box-shadow: none;
+    }
+
+    &.error {
+        border-color: rgba($color-red, .4);
+    }
+}
+
+.label {
+    color: rgba($color-white, .6);
+    font-size: 12px;
+    font-weight: 400;
+
+    &.error {
+        color: rgba($color-red, .4);
+    }
+}

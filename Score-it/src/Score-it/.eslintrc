@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": ["airbnb"],
+    "rules":{
+        "no-console": 0,
+        "indent": [2, 4],
+        "comma-dangle": [2, "never"],
+        "func-names": 0,
+        "space-before-function-paren": [2, "never"],
+        "curly": [2, "all"],
+        "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+        "react/prefer-stateless-function": 0,
+        "react/jsx-indent": [2, 4]
+    }
+}
+

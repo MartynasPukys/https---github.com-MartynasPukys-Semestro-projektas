@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'icons';
+    src: url('../icons/icons.eot?wjwdiu');
+    src: url('../icons/icons.eot?wjwdiu#iefix') format('embedded-opentype'),
+        url('../icons/icons.ttf?wjwdiu') format('truetype'),
+        url('../icons/icons.woff?wjwdiu') format('woff'),
+        url('../icons/icons.svg?wjwdiu#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    // use !important to prevent issues with browser extensions that change fonts
+    font-family: 'icons';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+
+    // Better Font Rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logout::before {
+    content: '\6c';
+}
+
+.icon-game::before {
+    content: '\67';
+}
+
+.icon-table::before {
+    content: '\74';
+}
+
+.icon-chevron::before {
+    content: '\43';
+}
+
+.icon-minus::before {
+    content: '\6d';
+}
+
+.icon-close::before {
+    content: '\63';
+}
+
+.icon-profile::before {
+    content: '\50';
+}
+
+.icon-rankings::before {
+    content: '\72';
+}
+
+.icon-plus::before {
+    content: '\70';
+}

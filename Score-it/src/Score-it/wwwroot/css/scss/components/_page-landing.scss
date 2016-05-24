@@ -1,0 +1,157 @@
+$landing-bp-sm: 480px;
+$landing-bp-md: 800px;
+
+.page-landing {
+    background: #050505;
+    padding: 0;
+
+    .wrapper {
+        max-width: 1200px;
+        padding: 0 10px;
+    }
+
+    .hero-bg {
+        background: #050122 url('../images/hero-bg.jpg') center / cover no-repeat;
+        border-bottom: 1px solid $color-blue;
+        min-height: 100vh;
+    }
+
+    .button {
+        max-width: 260px;
+
+        &:hover {
+            background: rgba($color-blue, .1);
+        }
+    }
+}
+
+.landing-header {
+    font-size: 14px;
+    padding: 40px 0;
+
+    .wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        display: inline-block;
+    }
+
+    a {
+        margin-left: 20px;
+
+        &.borderless {
+            opacity: 1;
+        }
+    }
+}
+
+.landing-content {
+    > h1 {
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 90px 0 60px;
+        text-transform: uppercase;
+
+        small {
+            display: block;
+            font-size: 24px;
+            font-weight: 300;
+            text-transform: none;
+        }
+    }
+
+    section {
+        padding: 160px 0 60px;
+
+        > h1 {
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+    }
+
+    .history {
+        margin-bottom: 30px;
+        max-width: 740px;
+    }
+
+    .profile-data-wrapper {
+        align-items: stretch;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile-data {
+        background: $color-grey-dark;
+        border-left: 3px solid $color-gold;
+        padding: 46px 20px;
+        width: 33%;
+
+        .profile-name {
+            @include word-wrap;
+        }
+
+        &:nth-child(2) {
+            border-color: $color-silver;
+        }
+
+        &:nth-child(3) {
+            border-color: $color-bronze;
+        }
+    }
+}
+
+@media (max-width: $landing-bp-md) {
+    .landing-header {
+        .wrapper {
+            display: block;
+            text-align: center;
+        }
+
+        .header-logo {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            font-size: 13px;
+            margin: 0 6px;
+            padding: 4px 12px;
+        }
+    }
+
+    .landing-content {
+        > h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin: 40px 0 60px;
+
+            small {
+                font-size: 18px;
+                margin-top: 12px;
+            }
+        }
+
+        section {
+            padding-top: 80px;
+
+            > h1 {
+                font-size: 28px;
+            }
+        }
+
+        .profile-data-wrapper {
+            display: block;
+        }
+
+        .profile-data {
+            margin: 0 auto 15px;
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+}

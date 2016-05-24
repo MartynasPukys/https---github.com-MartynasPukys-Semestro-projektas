@@ -1,0 +1,87 @@
+.history {
+    list-style-type: none;
+    padding: 0 15px;
+
+    &-item {
+        align-items: center;
+        background: rgba($color-white, .04);
+        border-left: 2px solid transparent;
+        display: flex;
+        margin: 0 0 10px;
+
+        &-team {
+            flex: 1 1;
+            font-size: 14px;
+            font-weight: 300;
+            overflow: hidden;
+            padding: 22px 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+
+        &-result {
+            font-size: 22px;
+            font-weight: 300;
+            text-align: center;
+            width: 100px;
+        }
+
+        &.win {
+            border-color: $color-green;
+
+            .history-item-result {
+                color: $color-green;
+            }
+
+            .history-item-team:last-child {
+                opacity: .4;
+            }
+        }
+
+        &.loss {
+            border-color: $color-red;
+
+            .history-item-result {
+                color: rgba($color-red, .5);
+            }
+
+            .history-item-team:first-child {
+                opacity: .4;
+            }
+        }
+    }
+
+    .modal &-item {
+        background: rgba($color-black, .06);
+        border-radius: 0 4px 4px 0;
+        margin: 0 -15px 10px;
+
+        &:last-child {
+            margin: 0 -15px;
+        }
+
+        &-team {
+            font-weight: 400;
+        }
+
+        &-result {
+            font-weight: 400;
+        }
+
+        &.win {
+            .history-item-team:last-child {
+                opacity: .6;
+            }
+        }
+
+        &.loss {
+            .history-item-team:first-child {
+                opacity: .6;
+            }
+        }
+    }
+}

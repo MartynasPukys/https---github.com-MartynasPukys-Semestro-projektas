@@ -1,0 +1,73 @@
+@mixin range-track($background, $border, $border-radius, $width, $height) {
+    appearance: none;
+    background: $background;
+    height: $height;
+    width: $width;
+
+    &::-webkit-slider-runnable-track {
+        background: $background;
+        border: $border;
+        border-radius: $border-radius;
+        height: $height;
+        width: $width;
+    }
+
+    &::-moz-range-track {
+        background: $background;
+        border: $border;
+        border-radius: $border-radius;
+        height: $height;
+        width: $width;
+    }
+
+    &::-ms-fill-upper,
+    &::-ms-fill-lower {
+        background: $background;
+        border: $border;
+        border-radius: $border-radius;
+        height: $height;
+        width: $width;
+    }
+
+    &::-ms-track {
+        background: $background;
+        border: 0;
+        color: transparent;
+        height: $height;
+        width: $width;
+    }
+}
+
+@mixin range-thumb($background, $border, $border-radius, $width, $height) {
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: $background;
+        border: $border;
+        border-radius: $border-radius;
+        height: $height;
+        width: $width;
+    }
+
+    &::-moz-range-thumb {
+        background: $background;
+        border: $border;
+        border-radius: $border-radius;
+        height: $height;
+        width: $width;
+    }
+
+    &::-ms-thumb {
+        background: $background;
+        border: $border;
+        border-radius: $border-radius;
+        height: $height;
+        width: $width;
+    }
+}
+
+@mixin word-wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}

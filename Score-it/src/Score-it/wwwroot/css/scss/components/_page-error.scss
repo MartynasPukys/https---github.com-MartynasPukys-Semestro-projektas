@@ -1,0 +1,16 @@
+.page-error {
+    padding: 30px 50px;
+
+    h1 {
+        color: rgba($color-red, .8);
+        font-size: 24px;
+    }
+
+    &-buttons {
+        text-align: center;
+
+        .button {
+            margin: 15px 0 0;
+        }
+    }
+}

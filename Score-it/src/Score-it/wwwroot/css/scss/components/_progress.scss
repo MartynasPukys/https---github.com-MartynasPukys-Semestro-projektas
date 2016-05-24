@@ -1,0 +1,46 @@
+$avatar-bar-color: $color-blue;
+$avatar-bg-color: $color-grey-xdark;
+
+.progress {
+    background: $avatar-bar-color;
+    border: 2px solid $avatar-bg-color;
+    border-radius: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+    width: 100%;
+}
+
+$step: 5;
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+
+@for $i from 0 through $loops {
+    .progress-#{$i * $step} {
+        @if ($i < $half) {
+            $nextdeg: 90deg + ($increment * $i);
+            background-image: linear-gradient(90deg, $avatar-bg-color 50%, transparent 50%, transparent), linear-gradient($nextdeg, $avatar-bar-color 50%, $avatar-bg-color 50%, $avatar-bg-color);
+        } @else {
+            $nextdeg: -90deg + ($increment * ($i - $half));
+            background-image: linear-gradient($nextdeg, $avatar-bar-color 50%, transparent 50%, transparent), linear-gradient(270deg, $avatar-bar-color 50%, $avatar-bg-color 50%, $avatar-bg-color);
+        }
+    }
+}
+
+.modal {
+    .progress {
+        border: 2px solid $color-white;
+    }
+
+    @for $i from 0 through $loops {
+        .progress-#{$i * $step} {
+            @if ($i < $half) {
+                $nextdeg: 90deg + ($increment * $i);
+                background-image: linear-gradient(90deg, $color-white 50%, transparent 50%, transparent), linear-gradient($nextdeg, $avatar-bar-color 50%, $color-white 50%, $color-white);
+            } @else {
+                $nextdeg: -90deg + ($increment * ($i - $half));
+                background-image: linear-gradient($nextdeg, $avatar-bar-color 50%, transparent 50%, transparent), linear-gradient(270deg, $avatar-bar-color 50%, $color-white 50%, $color-white);
+            }
+        }
+    }
+}

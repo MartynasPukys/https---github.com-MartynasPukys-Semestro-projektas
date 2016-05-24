@@ -1,0 +1,56 @@
+.game-setup-players {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-button {
+        border: 2px solid $color-white;
+        border-radius: 100%;
+        cursor: pointer;
+        font-size: 32px;
+        height: 104px;
+        line-height: 90px;
+        padding: 6px;
+        position: relative;
+        transition: background .2s;
+        width: 104px;
+
+        img {
+            border-radius: 100%;
+            left: 4px;
+            pointer-events: none;
+            position: absolute;
+            top: 4px;
+        }
+
+        &.blue {
+            background: rgba($color-blue, .1);
+            border-color: $color-blue;
+            color: $color-blue;
+
+            &:active {
+                background: rgba($color-blue, .2);
+            }
+        }
+
+        &.red {
+            background: rgba($color-red, .1);
+            border-color: $color-red;
+            color: $color-red;
+
+            &:active {
+                background: rgba($color-red, .2);
+            }
+        }
+
+        & + & {
+            margin-top: 36px;
+        }
+    }
+}

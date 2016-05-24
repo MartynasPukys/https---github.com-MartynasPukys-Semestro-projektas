@@ -1,0 +1,73 @@
+.modal {
+    background: rgba($color-black, .8);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+
+    &-close {
+        cursor: pointer;
+        height: 42px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 42px;
+        z-index: 1;
+    }
+
+    &-header,
+    &-content {
+        background: $color-white;
+        color: $color-grey-dark;
+        margin: 0 auto;
+        max-width: $media-large - 50px;
+    }
+
+    &-header {
+        border-bottom: 1px solid $color-border-light;
+        border-radius: 4px 4px 0 0;
+        height: 42px;
+        line-height: 42px;
+        padding: 0 42px;
+        position: relative;
+
+        h1 {
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &-content {
+        border-radius: 0 0 4px 4px;
+        max-height: calc(100% - 50px - 42px); // 100% - .navigation - .modal-header
+        overflow: auto;
+        padding: 0 15px 15px;
+
+        .button,
+        p {
+            margin-top: 15px;
+        }
+    }
+
+    &.with-search &-content {
+        max-height: calc(100% - 50px - 42px - 46px); // 100% - .navigation - .modal-header - .search
+    }
+
+    .search {
+        margin: 0 auto;
+        max-width: $media-large - 50px;
+    }
+}
+
+.modal-view {
+    &,
+    body {
+        overflow: hidden;
+    }
+}
